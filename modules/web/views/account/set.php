@@ -3,7 +3,7 @@ use app\common\services\UrlService;
 use app\common\services\ConstantMapService;
 use \app\common\services\StaticService;
 
-StaticService::includeAppJsStatic('/js/web/account/set.js', app\assets\webAsset::className() );
+StaticService::includeAppJsStatic('/js/web/account/set.js', app\assets\WebAsset::className() );
  ?>
 
 <?=  \Yii::$app->view->renderFile('@app/modules/web/views/common/tab_account.php');?>

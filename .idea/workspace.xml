@@ -413,12 +413,12 @@
       <workItem from="1497486073956" duration="68000" />
       <workItem from="1497486163718" duration="9558000" />
       <workItem from="1497569730084" duration="3219000" />
-      <workItem from="1497691466983" duration="2103000" />
+      <workItem from="1497691466983" duration="2702000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52628000" />
+    <option name="totallyTimeSpent" value="53227000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -466,133 +466,133 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/modules/web/views/Brand/info.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/brand/info.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/Brand/set.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/brand/set.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/Dashboard/index.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/dashboard/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/Finance/account.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/finance/account.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-252">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/Finance/index.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/finance/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-252">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/Finance/pay_info.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/finance/pay_info.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/Member/comment.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/member/comment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/Member/index.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/member/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/Member/info.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/member/info.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/Member/set.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/member/set.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/Qrcode/index.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/qrcode/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/Qrcode/set.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/qrcode/set.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/Stat/index.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/stat/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/Stat/member.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/stat/member.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/Stat/Product.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/stat/Product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/Stat/share.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/stat/share.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/User/edit.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/user/edit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/User/login.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/user/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/web/views/User/reset_pwd.php">
+    <entry file="file://$PROJECT_DIR$/modules/web/views/user/reset_pwd.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -697,7 +697,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/m/views/User/bind.php">
+    <entry file="file://$PROJECT_DIR$/modules/m/views/user/bind.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
@@ -711,14 +711,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/m/views/Product/info.php">
+    <entry file="file://$PROJECT_DIR$/modules/m/views/product/info.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-21">
           <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/m/views/Product/index.php">
+    <entry file="file://$PROJECT_DIR$/modules/m/views/product/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-176">
           <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
@@ -726,21 +726,21 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/m/views/User/cat.php" />
-    <entry file="file://$PROJECT_DIR$/modules/m/views/User/order.php">
+    <entry file="file://$PROJECT_DIR$/modules/m/views/user/order.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/m/views/Product/order.php">
+    <entry file="file://$PROJECT_DIR$/modules/m/views/product/order.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/m/views/User/address.php">
+    <entry file="file://$PROJECT_DIR$/modules/m/views/user/address.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
@@ -754,35 +754,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/m/views/User/address_set.php">
+    <entry file="file://$PROJECT_DIR$/modules/m/views/user/address_set.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/m/views/User/comment.php">
+    <entry file="file://$PROJECT_DIR$/modules/m/views/user/comment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/m/views/User/comment_set.php">
+    <entry file="file://$PROJECT_DIR$/modules/m/views/user/comment_set.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/m/views/User/fav.php">
+    <entry file="file://$PROJECT_DIR$/modules/m/views/user/fav.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/m/views/User/index.php">
+    <entry file="file://$PROJECT_DIR$/modules/m/views/user/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
