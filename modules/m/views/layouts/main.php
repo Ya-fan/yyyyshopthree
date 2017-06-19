@@ -1,6 +1,5 @@
 <?php 
 use \app\common\services\UrlService;
-
 ?>
 <?php 
 // 引入前端资源的文件
@@ -38,9 +37,9 @@ MAsset::register( $this );
     <p class="copyright">由<a href="/" target="_blank">编程浪子</a>提供技术支持</p>
 </div>
 <div class="footer_fixed clearfix">
-    <span><a href="/m/" class="default"><i class="home_icon"></i><b>首页</b></a></span>
-    <span><a href="/m/product/index" class="product"><i class="store_icon"></i><b>图书</b></a></span>
-    <span><a href="/m/user/index" class="user"><i class="member_icon"></i><b>我的</b></a></span>
+    <span><a href="http://www.yii.com/m/default/index" class="default"><i class="home_icon"></i><b>首页</b></a></span>
+    <span><a href="<?= UrlService::buildMUrl('/product/index') ?>" class="product"><i class="store_icon"></i><b>图书</b></a></span>
+    <span><a href="<?= UrlService::buildMUrl('/user/index') ?>" class="user"><i class="member_icon"></i><b>我的</b></a></span>
 </div>
 <?php $this->endBody(); ?>
 </body>

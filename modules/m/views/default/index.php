@@ -1,37 +1,43 @@
+<?php 
+use app\common\services\UrlService;
+use app\common\services\ConstantMapService;
+use \app\common\services\StaticService;
+use \app\common\services\UtilService;
 
+StaticService::includeAppJsStatic('/js/m/default/index.js', app\assets\MAsset::className() );
+
+ ?>
 
     <div class="shop_header">
         <i class="shop_icon"></i>
-        <strong>编程浪子的博客</strong>
+        <strong>敲程序的代码楊的店！</strong>
     </div>
 
-
+ <?php if( $imgae_list) {?>
     <div id="slideBox" class="slideBox">
         <div class="bd">
-            <ul>
-                <li><img style="max-height: 250px;" src="/web/uploads/brand/20170303/fe3545ecaef7e24a302231f5635713af.jpg"/>
+            <ul>    
+               
+                <?php  foreach($imgae_list as $val ) {?>
+                <li><img style="max-height: 250px;" src="<?= UrlService::buildImgUrl('brand',$val['image_key']) ?>"/>
                 </li>
-                <li><img style="max-height: 250px;" src="/web/uploads/brand/20170303/7a976289c2c1f551a4f21232575ba255.jpg"/>
-                </li>
-                <li><img style="max-height: 250px;" src="/web/uploads/brand/20170303/a8887738ab1bfd71765dd063fee4ddaa.jpg"/>
-                </li>
-                <li><img style="max-height: 250px;" src="/web/uploads/brand/20170303/1451ab22b16175889efffa21ec41b824.jpg"/>
-                </li>
-                <li><img style="max-height: 250px;" src="/web/uploads/brand/20170303/e9a3909b1c2db975d1b3c21c249c684e.jpg"/>
-                </li>
+                <?php }?>
+
+                
             </ul>
         </div>
         <div class="hd">
             <ul></ul>
         </div>
     </div>
+    <?php }else{echo '店铺装修中';} ?>
     <div class="fastway_list_box">
         <ul class="fastway_list">
-            <li><a href="javascript:void(0);" style="padding-left: 0.1rem;"><span>品牌名称：编程浪子的博客</span></a></li>
-            <li><a href="javascript:void(0);" style="padding-left: 0.1rem;"><span>联系电话：12113021774</span></a></li>
+            <li><a href="javascript:void(0);" style="padding-left: 0.1rem;"><span>品牌名称： <?= UtilService::encode( $brand_info['name'] ) ?></span></a></li>
+            <li><a href="javascript:void(0);" style="padding-left: 0.1rem;"><span>联系电话： <?= UtilService::encode( $brand_info['mobile'] ) ?></span></a></li>
             <li><a href="javascript:void(0);"
-                   style="padding-left: 0.1rem;"><span>联系地址：上海徐汇区宜山路810号8号楼创嘉站201 （贝岭电子大厦院内）</span></a></li>
-            <li><a href="javascript:void(0);" style="padding-left: 0.1rem;"><span>品牌介绍：我店是知名的综合性网上购物商城，由国内著名出版机构科文公司、美国老虎基金、美国IDG集团、卢森堡剑桥集团、亚洲创业投资基金（原名软银中国创业基金）共同投资成立。</span></a>
+                   style="padding-left: 0.1rem;"><span>联系地址：  <?= UtilService::encode( $brand_info['address'] ) ?></span></a></li>
+            <li><a href="javascript:void(0);" style="padding-left: 0.1rem;"><span>品牌介绍： <?= UtilService::encode( $brand_info['description'] )  ?></span></a>
             </li>
         </ul>
     </div>

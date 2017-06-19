@@ -1,11 +1,12 @@
 <?php 
 namespace app\modules\m\controllers;
 use yii\web\Controller;
+use app\modules\m\controllers\common\BaseMController;
 
 /**
  * Default controller for the `m` module
  */
-class ProductController extends Controller
+class ProductController extends BaseMController
 {
 	public $layout = 'main';
 	/**

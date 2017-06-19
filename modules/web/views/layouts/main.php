@@ -6,7 +6,7 @@ use \app\common\services\UrlService;
 use app\assets\WebAsset;
 
 WebAsset::register( $this );
-    
+$upload_config = \Yii::$app->params['upload'];
 ?>
 <?php $this->beginPage(); ?>
 
@@ -36,7 +36,7 @@ WebAsset::register( $this );
                     </div>
                 </li>
                 <li class="dashboard">
-                    <a href="/web/dashboard/index"><i class="fa fa-dashboard fa-lg"></i>
+                    <a href="<?= UrlService::buildWebUrl('/dashboard/index') ?>"><i class="fa fa-dashboard fa-lg"></i>
                         <span class="nav-label">仪表盘</span></a>
                 </li>
                 <li class="account">
@@ -79,7 +79,7 @@ WebAsset::register( $this );
                 <ul class="nav navbar-top-links navbar-right">
                     <li>
 						<span class="m-r-sm text-muted welcome-message">
-                            欢迎使用编程浪子图书商城管理后台
+                            欢迎使用·敲程序的代码楊·图书商城管理后台
                         </span>
                     </li>
                     <li class="hidden">
@@ -128,6 +128,9 @@ WebAsset::register( $this );
         <?= $content; ?>
         <!-- 不同部分 end -->
     </div>
+</div>
+<div class="hide hidden_layout_warp">
+        <input type="hidden" name="upload_config" value='<?= json_encode($upload_config)?>'>
 </div>
 <?php $this->endBody(); ?>
 </body>

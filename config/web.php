@@ -57,7 +57,9 @@ $config = [
         'm' => [
             'class' => 'app\modules\m\MModule',
         ],
-
+        'wx' => [
+            'class' => 'app\modules\wx\WxModule',
+        ],
     ],
 
 ];

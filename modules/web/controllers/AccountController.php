@@ -204,9 +204,9 @@ class AccountController extends BaseWebController
      */
     public function actionOps()
     {
-        if( $this->isRequestMethod( 'post' ) )
+        if( !$this->isRequestMethod( 'post' ) )
         {
-            $this->renderJson( [], '对不起，服务器繁忙', -1 );
+           return $this->renderJson( [], '对不起，服务器繁忙', -1 );
         }
 
         $act = trim( $this->post( 'act', '' ) );
