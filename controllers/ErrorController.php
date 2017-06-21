@@ -15,7 +15,6 @@ class ErrorController extends BaseController
     public function actionError()
   	{  
 
- 
   		$err_msg = '';
 
   		$error = \Yii::$app->errorHandler->exception;

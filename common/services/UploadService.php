@@ -3,7 +3,9 @@
 namespace app\common\services;
 
 use app\common\services\BaseService;
- 
+use app\models\Images;  
+
+
 // 上传图片服务
 class UploadService  extends BaseService
 {
@@ -57,6 +59,12 @@ class UploadService  extends BaseService
 		{
 			file_put_contents($upload_dir_path.$upload_fule_name, file_get_contents( $filepath ));
 		}
+
+		$images = new Images();
+		$images->bucket 	= $bucket;
+		$images->file_key 	= $upload_fule_name;
+		$images->created_time = date('Y-m-d H:i:s');
+		$images->save( 0 );
 
 		return [
 				'code'=>200,

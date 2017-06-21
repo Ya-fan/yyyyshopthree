@@ -2,6 +2,10 @@
 use app\common\services\UrlService;
 use app\common\services\ConstantMapService;
 use \app\common\services\StaticService;
+
+StaticService::includeAppJsStatic( '/js/web/book/index.js', app\assets\WebAsset::className() );
+
+
 ?>
 <?=  \Yii::$app->view->renderFile('@app/modules/web/views/common/tab_book.php',['current'=>'index']);?>
 
@@ -12,15 +16,18 @@ use \app\common\services\StaticService;
                 <div class="form-group">
                     <select name="status" class="form-control inline">
                         <option value="-1">请选择状态</option>
-                        <option value="1">正常</option>
-                        <option value="0">已删除</option>
+                        <?php  foreach( ConstantMapService::$status_maping as $key =>$val  ){?>
+                        <option value="<?= $key ?>" <?php if( $status == $key ){echo 'selected';} ?>><?= $val ?> </option>
+                        <?php } ?>
                     </select>
                 </div>
                 <div class="form-group">
                     <select name="cat_id" class="form-control inline">
                         <option value="0">请选择分类</option>
-                        <option value="2">互联网</option>
-                        <option value="1">政治类</option>
+                        <?php foreach( $car_info as $key=>$val ) {?>
+                       
+                        <option value="<?= $val['id'] ?>" <?php if( $val['id'] == $cat_id ){echo 'selected';} ?>><?= $val['name'] ?></option>
+                        <?php } ?>
                     </select>
                 </div>
                 <div class="form-group">
@@ -38,7 +45,7 @@ use \app\common\services\StaticService;
             <div class="row">
                 <div class="col-lg-12">
                     <a class="btn btn-w-m btn-outline btn-primary pull-right" href="/web/book/set">
-                        <i class="fa fa-plus"></i>图书
+                        <i class="fa fa-plus"></i>图书    
                     </a>
                 </div>
             </div>
@@ -56,92 +63,42 @@ use \app\common\services\StaticService;
             </tr>
             </thead>
             <tbody>
+            <?php if( $book_info) {
+                    foreach( $book_info as $key => $val){
+                ?>
             <tr>
-                <td>Hadoop权威指南(第3版)</td>
-                <td>互联网</td>
-                <td>78.20</td>
-                <td>130</td>
-                <td>hadoop,大数据</td>
+                <td><?= $val['name'] ?></td>
+                <td><?= $val['cat_id'] ?></td>
+                <td><?= $val['price'] ?></td>
+                <td><?= $val['stock'] ?></td>
+                <td><?= $val['tags'] ?></td>
                 <td>
-                    <a href="/web/book/info?id=4">
+                    <a href="<?= UrlService::buildWebUrl('/book/info',['id'=>$val['id']]) ?>">
                         <i class="fa fa-eye fa-lg"></i>
                     </a>
-                    <a class="m-l" href="/web/book/set?id=4">
+                    <a class="m-l" href="<?= UrlService::buildWebUrl('/book/set',['id'=>$val['id']]) ?>">
                         <i class="fa fa-edit fa-lg"></i>
                     </a>
-
-                    <a class="m-l remove" href="javascript:void(0);" data="4">
+                    <?php if($val['status'] == 1) {?>
+                    <a class="m-l remove" href="javascript:void(0);" data="<?= $val['id'] ?>">
                         <i class="fa fa-trash fa-lg"></i>
                     </a>
+                    <?php }else{?>
+                    <a class="m-l recover" href="javascript:void(0);" data="<?= $val['id'] ?>">
+                        <i class="fa fa-rotate-left fa-lg"></i>
+                    </a>
+                    <?php } ?>
                 </td>
             </tr>
-            <tr>
-                <td>高性能MySQL（第3版）</td>
-                <td>互联网</td>
-                <td>101.10</td>
-                <td>100</td>
-                <td>mysql,index</td>
-                <td>
-                    <a href="/web/book/info?id=3">
-                        <i class="fa fa-eye fa-lg"></i>
-                    </a>
-                    <a class="m-l" href="/web/book/set?id=3">
-                        <i class="fa fa-edit fa-lg"></i>
-                    </a>
-
-                    <a class="m-l remove" href="javascript:void(0);" data="3">
-                        <i class="fa fa-trash fa-lg"></i>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>php开发教程</td>
-                <td>互联网</td>
-                <td>45.00</td>
-                <td>92</td>
-                <td>php</td>
-                <td>
-                    <a href="/web/book/info?id=2">
-                        <i class="fa fa-eye fa-lg"></i>
-                    </a>
-                    <a class="m-l" href="/web/book/set?id=2">
-                        <i class="fa fa-edit fa-lg"></i>
-                    </a>
-
-                    <a class="m-l remove" href="javascript:void(0);" data="2">
-                        <i class="fa fa-trash fa-lg"></i>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>浪潮之巅</td>
-                <td>政治类</td>
-                <td>88.88</td>
-                <td>5</td>
-                <td>浪潮,吴军</td>
-                <td>
-                    <a href="/web/book/info?id=1">
-                        <i class="fa fa-eye fa-lg"></i>
-                    </a>
-                    <a class="m-l" href="/web/book/set?id=1">
-                        <i class="fa fa-edit fa-lg"></i>
-                    </a>
-
-                    <a class="m-l remove" href="javascript:void(0);" data="1">
-                        <i class="fa fa-trash fa-lg"></i>
-                    </a>
-                </td>
-            </tr>
+            <?php }} ?>
+            
             </tbody>
         </table>
-        <div class="row">
-            <div class="col-lg-12">
-                <span class="pagination_count" style="line-height: 40px;">共4条记录 | 每页50条</span>
-                <ul class="pagination pagination-lg pull-right" style="margin: 0 0 ;">
-                    <li class="active"><a href="javascript:void(0);">1</a></li>
-                </ul>
-            </div>
-        </div>
+ 
+        <?=  \Yii::$app->view->renderFile('@app/modules/web/views/common/pagination.php',[
+                    'pages'=>$pages,
+                    'url'=>"/book/index",
+        ]);?>
     </div>
 </div>
 

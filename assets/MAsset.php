@@ -24,12 +24,15 @@ class MAsset extends AssetBundle
 
 
         $this->js = [
-                
+        'http://res.wx.qq.com/open/js/jweixin-1.2.0.js',
+
         'web/plugins/jquery-2.1.1.js',
 
         'js/m/TouchSlide.1.1.js',
-
+        
         'js/m/common.js?ver='.$RELEASE_VERSION,
+
+        'js/m/wx.js?ver='.$RELEASE_VERSION,
         ];
 
         parent::registerAssetFiles( $View );

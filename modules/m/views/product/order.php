@@ -1,5 +1,7 @@
 <?php
-
+use \app\common\services\UrlService;
+use app\common\services\StaticService;
+StaticService::includeAppJsStatic('/js/m/product/order.js', app\assets\MAsset::className());
 ?>
 
     <div class="page_title clearfix">
@@ -30,20 +32,22 @@
             <h2>确认订单信息</h2>
         </div>
         <ul class="order_list">
-            <li data="4" data-quantity="1">
-                <a href="/m/product/info?id=4">
+        <?php foreach( $product_list as $val ) {?>
+            <li data="<?= $val['id'] ?>" data-quantity="<?= $val['num'] ?>">
+                <a href="<?= UrlService::buildMUrl( '/product/info', ['id'=>$val['id'] ] ) ;?> ">
                     <i class="pic">
-                        <img src="/web/uploads/book/20170316/d7330817f6279b882d57157ebeec7816.jpg"
+                        <img src="<?= $val['image'] ?>"
                              style="width: 100px;height: 100px;"/>
                     </i>
-                    <h2>Hadoop权威指南(第3版) x 1</h2>
+                    <h2><?= $val['name'] ?> x <?= $val['num'] ?></h2>
                     <h4>&nbsp;</h4>
-                    <b>¥ 78.20</b>
+                    <b>¥ <?= $val['price']?></b>
                 </a>
             </li>
+        <?php } ?>
         </ul>
         <div class="order_header" style="border-top: 1px dashed #ccc;">
-            <h2>总计：78.20</h2>
+            <h2>总计： <?= $total_pay_money  ?></h2>
         </div>
     </div>
     <div class="op_box">

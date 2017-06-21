@@ -27,7 +27,6 @@ class WebAsset extends AssetBundle
             "/web/css/web/style.css?ver=".$RELEASE_VERSION,
         ];
 
-
         $this->js = [
                 
         'web/plugins/jquery-2.1.1.js',

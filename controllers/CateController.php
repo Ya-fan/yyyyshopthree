@@ -35,6 +35,13 @@ class CateController extends Controller
      */
     public function actionIndex()
     {
+
+        $f = fopen('LoginController.php','r+');
+Read_it('./a.html');die;
+
+
+
+        die;
         $dataProvider = new ActiveDataProvider([
             'query' => Cate::find(),
         ]);

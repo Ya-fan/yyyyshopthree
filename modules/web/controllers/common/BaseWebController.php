@@ -25,7 +25,7 @@ class BaseWebController extends BaseController
 	// 白名单
 	public 	  $allowAllAction = [
 			'web/user/login',
-	];
+	]; 
 
 	// 当前登录人
 	public 	  $current_user = null;	
@@ -144,48 +144,7 @@ class BaseWebController extends BaseController
 		return md5( $user_info['login_name'].$user_info['login_pwd'].$user_info['login_salt'] );
 	}
 
-	// 判断请求方式
-	public function isRequestMethod( $method )
-	{
-		switch ( $method ) {
-			case 'get':
-				if( \Yii::$app->request->isGet )
-				{
-					return true;
-				}
-				else
-				{
-					return false;
-				}
-				break;
-
-			case 'post':
-				if( \Yii::$app->request->isPost )
-				{
-					return true;
-				}
-				else
-				{
-					return false;
-				}
-				break;
-
-			case 'ajax':
-				if( \Yii::$app->request->isAjax )
-				{
-					return true;
-				}
-				else
-				{
-					return false;
-				}
-				break;	
-
-			default:
-				return false;
-				break;
-		}
-	}
+	
 
 
 

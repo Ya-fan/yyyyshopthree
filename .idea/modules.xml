@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../advanced/.idea/advanced.iml" filepath="$PROJECT_DIR$/../advanced/.idea/advanced.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/basic.iml" filepath="$PROJECT_DIR$/.idea/basic.iml" />
+      <module fileurl="file://G:/kaoshi/bjxzpx/bjxzpx/.idea/bjxzpx.iml" filepath="G:/kaoshi/bjxzpx/bjxzpx/.idea/bjxzpx.iml" />
     </modules>
   </component>
 </project>

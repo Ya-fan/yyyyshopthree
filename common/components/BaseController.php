@@ -106,7 +106,48 @@ class BaseController extends Controller
 	}
 
 
+	// 判断请求方式
+	public function isRequestMethod( $method )
+	{
+		switch ( $method ) {
+			case 'get':
+				if( \Yii::$app->request->isGet )
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+				break;
 
+			case 'post':
+				if( \Yii::$app->request->isPost )
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+				break;
+
+			case 'ajax':
+				if( \Yii::$app->request->isAjax )
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+				break;	
+
+			default:
+				return false;
+				break;
+		}
+	}
 
 
 

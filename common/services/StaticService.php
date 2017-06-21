@@ -13,7 +13,7 @@ class StaticService
 	//引入Css文件
 	public static function includeAppCssStatic( $path, $depend)
 	{
-			self::includeAppStatic( 'css', $path, $depend );		
+			self::includeAppStatic( "css", $path, $depend );		
 	}
 
 	// 引入自定义文件
@@ -27,7 +27,7 @@ class StaticService
 					break;
 
 				case 'css':
-					\Yii::$app->getView()->registerJsFile( $path, [ 'depends'=>$depend ] );
+					\Yii::$app->getView()->registerCssFile( $path, [ 'depends'=>$depend ] );
 					break;
 				default:
 				

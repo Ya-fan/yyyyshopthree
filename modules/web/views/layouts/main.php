@@ -1,7 +1,7 @@
 <?php 
 use \app\common\services\UrlService;
- ?>
-<?php 
+use \app\common\services\StaticService;
+
 // 引入前端资源的文件
 use app\assets\WebAsset;
 

@@ -29,7 +29,7 @@ class UploadController extends BaseWebController
 	public function actionPic()
 	{
 		$bucket = trim( $this->post('bucket', '') );
-			
+				
 		$callback = "window.parent.upload"; //errors/success
 
 		if( !$_FILES || !isset( $_FILES['pic'] ))

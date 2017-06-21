@@ -1,5 +1,4 @@
 ;
-
 var common_ops = {
     init:function(){
         this.eventBind();

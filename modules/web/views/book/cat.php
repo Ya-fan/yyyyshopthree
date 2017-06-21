@@ -2,6 +2,8 @@
 use app\common\services\UrlService;
 use app\common\services\ConstantMapService;
 use \app\common\services\StaticService;
+
+StaticService::includeAppJsStatic( '/js/web/book/cat.js', app\assets\WebAsset::className() )
 ?>
 <?=  \Yii::$app->view->renderFile('@app/modules/web/views/common/tab_book.php',['current'=>'cat']);?>
 
@@ -10,17 +12,18 @@ use \app\common\services\StaticService;
         <form class="form-inline wrap_search">
             <div class="row  m-t p-w-m">
                 <div class="form-group">
-                    <select name="status" class="form-control inline">
+                    <select name="status" class="form-control inline search">
                         <option value="-1">请选择状态</option>
-                        <option value="1">正常</option>
-                        <option value="0">已删除</option>
+                        <?php  foreach( ConstantMapService::$status_maping as $key =>$val  ){?>
+                        <option value="<?= $key ?>" <?php if( $status==$key ){echo 'selected';} ?> ><?= $val ?> </option>
+                        <?php } ?>
                     </select>
                 </div>
             </div>
             <hr/>
             <div class="row">
                 <div class="col-lg-12">
-                    <a class="btn btn-w-m btn-outline btn-primary pull-right" href="/web/cat/set">
+                    <a class="btn btn-w-m btn-outline btn-primary pull-right" href="<?= UrlService::buildWebUrl('/book/cat-set') ?>">
                         <i class="fa fa-plus"></i>分类
                     </a>
                 </div>
@@ -38,34 +41,36 @@ use \app\common\services\StaticService;
             </tr>
             </thead>
             <tbody>
+            <?php if($car_info) {?>
+                <?php foreach($car_info as $key =>$val) {?>
             <tr>
-                <td>1</td>
-                <td>政治类</td>
-                <td>已删除</td>
-                <td>4</td>
+                <td><?= $val['id'] ?></td>
+                <td><?= $val['name'] ?></td>
+                <td><?= $val['status'] ==1 ? '正常':'已删除' ;?></td>
+                <td><?= $val['weight'] ?></td>
                 <td>
-                    <a class="m-l recover" href="javascript:void(0);" data="1">
-                        <i class="fa fa-rotate-left fa-lg"></i>
-                    </a>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>互联网</td>
-                <td>正常</td>
-                <td>1</td>
-                <td>
-                    <a class="m-l" href="/web/book/cat-set?id=2">
+                    <a class="m-l" href="<?= UrlService::buildWebUrl('/book/cat-set',['id'=>$val['id']]) ?>">
                         <i class="fa fa-edit fa-lg"></i>
                     </a>
-
-                    <a class="m-l remove" href="javascript:void(0);" data="2">
+                    <?php if( $val['status'] == 1 ) {?>
+                    <a class="m-l remove" href="javascript:void(0);" data="<?= $val['id'] ?>">
                         <i class="fa fa-trash fa-lg"></i>
                     </a>
+                    <?php }else{?>
+                    <a class="m-l recover" href="javascript:void(0);" data="<?= $val['id'] ?>">
+                        <i class="fa fa-rotate-left fa-lg"></i>
+                    </a>
+                    <?php } ?>
                 </td>
             </tr>
+            <?php }} ?>
+            
             </tbody>
         </table>
+         <?=  \Yii::$app->view->renderFile('@app/modules/web/views/common/pagination.php',[
+                    'pages'=>$pages,
+                    'url'=>"/book/cat",
+        ]);?>
     </div>
 </div>
 

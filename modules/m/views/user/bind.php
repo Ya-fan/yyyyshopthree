@@ -1,6 +1,9 @@
 <?php
+use app\common\services\UrlService;
+use app\common\services\ConstantMapService;
+use \app\common\services\StaticService;
 
-
+StaticService::includeAppJsStatic( '/js/m/user/bind.js', app\assets\WebAsset::className() )
 ?>
 
     <div class="page_title clearfix">
@@ -14,7 +17,7 @@
             </div>
             <div class="form_input_box captcha_code">
                 <input name="img_captcha" type="text" placeholder="请输入图形验证码" value="" class="form_input"/>
-                <img src="/default/img_captcha" onclick="this.src='/default/img_captcha?'+Math.random();"/>
+                <img src="/m/default/img_captcha" onclick="this.src="<?= \Yii::$app->params['domain']['m'] ?>"+/default/img_captcha?'+Math.random();"/>
             </div>
             <div class="form_input_box phone_code">
                 <span class="fa fa-lock fa-2x"></span>

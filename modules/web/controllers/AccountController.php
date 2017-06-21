@@ -146,7 +146,7 @@ class AccountController extends BaseWebController
          
           $module_user->updated_time = $date;
 
-          $module_user->save();
+          $module_user->save( 0 );
 
           return $this->renderJson( [], '保存成功', 200 );
 
